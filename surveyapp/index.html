@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Comfortaa|Lobster|Merienda|Merienda+One|Orbitron|Quicksand|Raleway"
+        rel="stylesheet">
+    <title>Survey Form</title>
+</head>
+
+<body>
+    <div class="container">
+        <p id="title" class="text-center">Survey Form For a Developer</p>
+        <p id="description" class="text-center">Tell us about your experience as a developer</p>
+        <form name="Form" id="survey-form" method="" action="">
+
+            <div class="labels">
+                <label id="name-label" for="name">&#8727; Name</label>
+            </div>
+            <div class="input-tab">
+                <input type="text" name="Fullname" id="name" class="input-field" placeholder="enter your name" autofocus
+                    required />
+            </div>
+
+            <div id="question" class="labels">
+                <label>&#8727; Select your gender</label>
+            </div>
+            <div class="input-tab" id="gender">
+                <input type="radio" name="Gender" value="python">Male<br>
+                <input type="radio" name="Gender" value="Java">Female<br>
+            </div>
+
+            <div class="labels">
+                <label id="email-label" for="email">&#8727; E-mail</label>
+            </div>
+            <div class="input-tab">
+                <input type="email" name="Email" id="email" class="input-field" placeholder="enter your email"
+                    required />
+            </div>
+
+            <div class="labels">
+                <label id="number-label" for="mobile">&#8727;Mobile</label>
+            </div>
+            <div class="input-tab">
+                <input type="text" name="Mobile" id="mobile" class="input-field" placeholder="0709999999" required />
+            </div>
+
+            <div class="labels">
+                <label id="number-label" for="age">&#8727;Your Age</label>
+            </div>
+            <div class="input-tab">
+                <input type="number" name="Age" min="1" max="130" id="age" class="input-field"
+                    placeholder="enter your age" required />
+            </div>
+
+            <div class="labels">
+                <label id="dropdown-label" for="country">Country of Origin</label>
+            </div>
+            <div class="input-tab">
+                <select id="country" name="Country_of_Origin" class="dropdown form-control form-control-sm">
+                    <option>select an option...</option>
+                    <option>Burundi</option>
+                    <option>Rwanda</option>
+                    <option>Tanzania</option>
+                    <option>Uganda</option>
+                    <option>Kenya</option>
+                </select>
+            </div>
+
+            <div class="labels">
+                <label id="dropdown-label" for="dropdown">Your Current role</label>
+            </div>
+            <div class="input-tab">
+                <select id="dropdown" name="Current_role" class="dropdown form-control form-control-sm">
+                    <option value="" disabled selected>select an option...</option>
+                    <option>Student</option>
+                    <option>FrontEnd-developer</option>
+                    <option>BackEnd-developer</option>
+                    <option>Prefer not to say</option>
+                    <option>Other</option>
+                </select>
+            </div>
+
+            <div id="question" class="labels">
+                <label>&#8727; What is the Best Suited Programming Language and tools?</label>
+            </div>
+            <div class="input-tab">
+                <input type="radio" name="Programming_Language" value="python">Python<br>
+                <input type="radio" name="Programming_Language" value="Java">Java<br>
+                <input type="radio" name="Programming_Language" value="Visual Basic">Visual Basic<br>
+                <input type="radio" name="Programming_Language" value="None of the above">None of the above<br>
+            </div>
+
+            <div class="labels">
+                <label id="stars-label" for="dropdown">
+                    &#8727; On a scale from 1 to 5, how many stars would you rate self as a developer?
+                </label>
+            </div>
+            <div class="input-tab">
+                <select id="dropdown" class="dropdown" name="Rate_developer">
+                    <option value="" disabled selected>select an option...</option>
+                    <option>5 &#9733; &#9733; &#9733; &#9733; &#9733; excellent</option>
+                    <option>4 &#9733; &#9733; &#9733; &#9733;</option>
+                    <option>3 &#9733; &#9733; &#9733; satisfactory</option>
+                    <option>2 &#9733; &#9733;</option>
+                    <option>1 &#9733; worst</option>
+                </select>
+            </div>
+
+            <div class="labels">
+                <label> Would you like to subscribe to our weekly programming webinars? </label>
+            </div>
+            <div class="input-tab">
+                <input type="checkbox" value="yes" id="check1" onclick="justOne(this)" checked /> Yes
+                (recommended)<br>
+                <input class="custom-control-input" type="checkbox" value="no" id="check2" onclick="justOne(this)" />No
+                <br>
+            </div>
+
+            <div class="labels">
+                <label for="comments">Your feedback is appreciated, so don't forget to give us your additional
+                    comments:</label>
+            </div>
+            <div class="input-tab">
+                <textarea name="Feedback" class="input-field" id="textarea" rows="11"
+                    placeholder="enter your message..."></textarea>
+                <small id="submitHelp" class="form-text">&#8727; We'll never share your data with anyone else for
+                    privacy reasons.</small>
+            </div>
+
+            <div class="btn">
+                <button id="submit" type="submit">Submit</button>
+            </div>
+        </form>
+        <h1 id="msg"></h1>
+        <hr>
+        <div id="footer">
+            <h6>Christophe &copy;2023 - All Rights Reserved</h6>
+        </div>
+    </div>
+    <script src="./scripts/app.js"></script>
+</body>
+
+</html>
